@@ -1,0 +1,14 @@
+N = int(input())
+count = 0
+curr_val = N
+
+while True:
+    new_val = ((curr_val % 10) * 10) + ((curr_val // 10 + curr_val % 10) % 10)
+    count += 1
+    
+    if new_val == N:
+        break
+    else:
+        curr_val = new_val
+    
+print(count)
